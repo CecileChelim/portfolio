@@ -5,7 +5,12 @@ import Dribble from './img/dribble.svg'
 import DribbleCouleurs from './img/dribble-couleur.svg'
 import Linkedin from './img/linkedin.svg'
 import LinkedinCouleurs from './img/linkedin-couleur.svg'
-import Mail from './img/mail.png'
+import Rogervoice from './img/projet/rogervoice.png'
+import Airfund from './img/projet/airfund.png'
+import Bnp from './img/projet/bnp.png'
+import Malakoff from './img/projet/malakoffhumanis.png'
+import Concret from './img/concret.svg'
+
 
 function App() {
   return (
@@ -23,7 +28,6 @@ function App() {
         </a>
     </ul>
     </BlocContact>
-    <div className="container">
       <Head>
         <Text>
         <h1>Je suis Cécile, <PhotoC></PhotoC></h1>
@@ -34,15 +38,37 @@ function App() {
       </Head>
       <Project>
         <div className='container'>
-          <div className='row'>
-            <BlocProjet  className='col-md-6 malakoff'>
-              <img src="https://www.aboghanbari.com/static/a89fe8a4ad332d942da74da90f09fb8f/75352/Flop.png"/>
-            </BlocProjet>
+        <div className='row'>
+          <div className='mt-5 mb-5 col-md-12 text-center'>
+            <Speech>
+              J’aide des superbes entreprises
+à créer les meilleurs produits et services pour leurs utilisateurs.<br/> 
+J'ai une appétence particulière pour les plateformes métier, les projets complexes, ceux dont on pense que le design n'est que secondaire...
+<br/><br/>
+N'oubliez pas que <b>le design est l’ambassadeur silencieux de votre marque 🙂</b>
+</Speech>
+
           </div>
+        </div>
+          <RowProject className='row'>
+          <BlocProjet>
+            <img src={Bnp} alt="bnp"/>
+            </BlocProjet>
+            <BlocProjet>
+            <img src={Malakoff} alt="malakoff"/>
+            </BlocProjet>
+            <BlocProjet>
+              <img src={Rogervoice} alt="rogervoice"/>
+            </BlocProjet>
+            <BlocProjet>
+            <img src={Airfund} alt="airfund"/>
+            </BlocProjet>
+            
+          </RowProject>
         </div>
 
       </Project>
-    </div>
+    
     </div>
   );
 }
@@ -82,8 +108,7 @@ font-style:italc;
 `;
 
 const Head = styled.header`
-min-height: 100vh
-    background-color: #F4F4F4;
+    min-height: 80vh;
     padding-top: 15%;
 `;
 
@@ -159,10 +184,42 @@ const Project = styled.section`
 padding:2rem;
 `;
 
+const RowProject = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 3rem;
+`;
+const Speech = styled.p`
+width: 70%;
+margin: 0px auto;
+font-size: 1.1rem;
+line-height: 1.8rem;
+color: #5d5d5d;
+`;
+
+
+
+
+
+
 const BlocProjet = styled.div`
-padding:2rem;
+
+padding:0;
+border-radius:50px;
+text-align:center;
+flex-basis: 520px;
+
+
 img{
   width:100%;
+  transition:all ease .8s;
+}
+
+&:hover{
+img{
+  transform:scale(1.02);
+}
 }
 `;
 
