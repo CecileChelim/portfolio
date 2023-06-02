@@ -9,66 +9,72 @@ import Rogervoice from './img/projet/rogervoice.png'
 import Airfund from './img/projet/airfund.png'
 import Bnp from './img/projet/bnp.png'
 import Malakoff from './img/projet/malakoffhumanis.png'
-import Concret from './img/concret.svg'
+import Renault from './img/projet/renault.png'
+import Autre from './img/projet/autres.png'
 
 
 function App() {
   return (
     <div>
-    <BlocContact>
-      <a href="mailto:chelim.cecile@gmail.com"  className='btn btn-primary'>Me contacter</a>
-      <ul class="list-group list-group-horizontal">
-      <a href="https://dribbble.com/cecile_chelim" target="blank" class="list-group-item list-group-item-action">
-        <img src={Dribble} alt="Dribble"/>
-        <img src={DribbleCouleurs} alt="Dribble"/>
-        </a>
-      <a href="https://www.linkedin.com/in/cecilechelim/?originalSubdomain=fr" target="blank" class="list-group-item list-group-item-action">
-        <img  src={Linkedin} alt="Linkedin"/>
-        <img src={LinkedinCouleurs} alt="Linkedin"/>
-        </a>
-    </ul>
-    </BlocContact>
+      <BlocContact>
+        <a href="mailto:chelim.cecile@gmail.com" className='btn btn-primary'>Me contacter</a>
+        <ul class="list-group list-group-horizontal">
+          <a href="https://dribbble.com/cecile_chelim" target="blank" class="list-group-item list-group-item-action">
+            <img src={Dribble} alt="Dribble" />
+            <img src={DribbleCouleurs} alt="Dribble" />
+          </a>
+          <a href="https://www.linkedin.com/in/cecilechelim/?originalSubdomain=fr" target="blank" class="list-group-item list-group-item-action">
+            <img src={Linkedin} alt="Linkedin" />
+            <img src={LinkedinCouleurs} alt="Linkedin" />
+          </a>
+        </ul>
+      </BlocContact>
       <Head>
         <Text>
-        <h1>Je suis Cécile, <PhotoC></PhotoC></h1>
-        <Fonction className='raleway'><i>Ux Designer</i></Fonction>
-        <h1>basée à {" "}<img className='mr-3' src={Pin} alt="pin"/> Paris</h1>
-      
+          <h1>Je suis Cécile, <PhotoC></PhotoC></h1>
+          <Fonction className='raleway'><i>Ux Designer</i></Fonction>
+          <h1>basée à {" "}<img className='mr-3' src={Pin} alt="pin" /> Paris</h1>
+
         </Text>
       </Head>
       <Project>
         <div className='container'>
-        <div className='row'>
-          <div className='mt-5 mb-5 col-md-12 text-center'>
-            <Speech>
-              J’aide des superbes entreprises
-à créer les meilleurs produits et services pour leurs utilisateurs.<br/> 
-J'ai une appétence particulière pour les plateformes métier, les projets complexes, ceux dont on pense que le design n'est que secondaire...
-<br/><br/>
-N'oubliez pas que <b>le design est l’ambassadeur silencieux de votre marque 🙂</b>
-</Speech>
+          <div className='row'>
+            <div className='mt-5 mb-5 col-md-12 text-center'>
+              <Speech>
+                J’aide des superbes entreprises
+                à créer les meilleurs produits et services pour leurs utilisateurs.<br />
+                J'ai une appétence particulière pour les plateformes métier, les projets complexes, ceux dont on pense que le design n'est que secondaire...
+                <br /><br />
+                N'oubliez pas que <b>le design est l’ambassadeur silencieux de votre marque 🙂</b>
+              </Speech>
 
+            </div>
           </div>
-        </div>
           <RowProject className='row'>
-          <BlocProjet>
-            <img src={Bnp} alt="bnp"/>
+            <BlocProjet>
+              <img src={Bnp} alt="bnp" />
             </BlocProjet>
             <BlocProjet>
-            <img src={Malakoff} alt="malakoff"/>
+              <img src={Malakoff} alt="malakoff" />
             </BlocProjet>
             <BlocProjet>
-              <img src={Rogervoice} alt="rogervoice"/>
+              <img src={Rogervoice} alt="rogervoice" />
             </BlocProjet>
             <BlocProjet>
-            <img src={Airfund} alt="airfund"/>
+              <img src={Airfund} alt="airfund" />
+            </BlocProjet>
+            <BlocProjet>
+              <img src={Renault} alt="renault" />
+            </BlocProjet>
+            <BlocProjet>
+              <img src={Autre} alt="autres projets" />
             </BlocProjet>
             
           </RowProject>
         </div>
-
       </Project>
-    
+
     </div>
   );
 }
@@ -184,6 +190,8 @@ const Project = styled.section`
 padding:2rem;
 `;
 
+
+
 const RowProject = styled.div`
 display: flex;
 flex-wrap: wrap;
@@ -197,11 +205,6 @@ font-size: 1.1rem;
 line-height: 1.8rem;
 color: #5d5d5d;
 `;
-
-
-
-
-
 
 const BlocProjet = styled.div`
 
