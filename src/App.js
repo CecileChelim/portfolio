@@ -16,6 +16,21 @@ import Autre from './img/projet/autres.png'
 function App() {
   return (
     <div>
+      <Navbar>
+        <div className='container'>
+        <div className='row'>
+        <div className='col-md-4' align="left">
+          <p>
+           Cécile Chelim <br/>UX Designer Paris
+          </p>
+        </div>
+        <div className='col-md-4' align="center">test</div>
+        <div className='col-md-4' align="right">
+          
+        </div>
+        </div>
+        </div>
+      </Navbar>
       <BlocContact>
         <a href="mailto:chelim.cecile@gmail.com" className='btn btn-primary'>Me contacter</a>
         <ul class="list-group list-group-horizontal">
@@ -79,6 +94,21 @@ function App() {
   );
 }
 
+
+
+const Navbar = styled.div`
+padding:3rem;
+p{
+  opacity:.6;
+}
+.container{
+  border:1px solid red;
+}
+.col-md-4{
+  border:1px solid green;
+}
+`;
+
 const PhotoC = styled.div`
 width: 300px;
 border-radius: 200px;
@@ -119,19 +149,25 @@ const Head = styled.header`
 `;
 
 const BlocContact = styled.div`
-position: fixed;
-    bottom: 2rem;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
+background-color: rgb(255, 255, 255);
+    opacity: 1;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 16px 0px;
+    align-items: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    overflow: visible;
+    padding: 8px 8px 8px 32px;
+    position: relative;
+    position: absolute;
+    bottom: 3rem;
+    left: 34%;
 
     a.btn{
       border-radius:100px;
-      background-color:#000;
+      background-color:#fd5b1d;
       margin-right: 2rem;
       border: 0;
       padding: 0.8rem 2rem;
