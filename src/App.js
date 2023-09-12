@@ -11,6 +11,8 @@ import Bnp from './img/projet/bnp.png'
 import Malakoff from './img/projet/malakoffhumanis.png'
 import Renault from './img/projet/renault.png'
 import Autre from './img/projet/autres.png'
+import LogoCecile from './img/logo-cecile-chelim.png'
+
 
 
 function App() {
@@ -24,9 +26,11 @@ function App() {
            Cécile Chelim <br/>UX Designer Paris
           </p>
         </div>
-        <div className='col-md-4' align="center">test</div>
+        <div className='col-md-4' align="center">
+        <img src={LogoCecile} width="200px" alt="logo-cecile-chelim" />
+        </div>
         <div className='col-md-4' align="right">
-          
+        <a href="mailto:chelim.cecile@gmail.com" className='btn btn-primary'>Parlons de votre projet <span>👋</span></a>
         </div>
         </div>
         </div>
@@ -101,12 +105,19 @@ padding:3rem;
 p{
   opacity:.6;
 }
-.container{
-  border:1px solid red;
+a.btn{
+  border-radius:100px;
+  background-color:#fd5b1d;
+  margin-right: 2rem;
+  border: 0;
+  padding: 0.8rem 2rem;
+  transition:all ease .2s;
+  &:hover{
+    font-weight:bold;
+    background-color:#353434;
+  }
 }
-.col-md-4{
-  border:1px solid green;
-}
+
 `;
 
 const PhotoC = styled.div`
@@ -145,7 +156,7 @@ font-style:italc;
 
 const Head = styled.header`
     min-height: 80vh;
-    padding-top: 15%;
+    padding-top: 7%;
 `;
 
 const BlocContact = styled.div`
@@ -161,10 +172,9 @@ background-color: rgb(255, 255, 255);
     overflow: visible;
     padding: 8px 8px 8px 32px;
     position: relative;
-    position: absolute;
+    position: fixed;
     bottom: 3rem;
     left: 34%;
-
     a.btn{
       border-radius:100px;
       background-color:#fd5b1d;
@@ -225,14 +235,12 @@ ul{
 const Project = styled.section`
 padding:2rem;
 `;
-
-
-
 const RowProject = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 3rem;
+margin-bottom:10rem;
 `;
 const Speech = styled.p`
 width: 70%;
